@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "96d2a7f0-0850-4518-9a1f-d094ca6613ed",
+		"name": "ms-orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getorder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/api/getorder/260",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"getorder",
+						"260"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateorder",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"items\": [\r\n        {\r\n         \r\n            \"productId\": 88,\r\n            \"productName\": \"luffy updated 2\",\r\n            \"quantity\": 111,\r\n            \"price\": 399988\r\n        },\r\n        {\r\n      \r\n            \"productId\": 89,\r\n            \"productName\": \"nammm updated 2\",\r\n            \"quantity\": 44888,\r\n            \"price\": 567\r\n        }\r\n       \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/updateorder/65",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"updateorder",
+						"65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteorder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8990/order/deleteorder/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"order",
+						"deleteorder",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "7151b603-826b-469a-868f-392b68b5f45f",
+		"name": "api-composite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-product-inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\":\"sony\",\r\n    \"description\":\"sony dddd\",\r\n    \"price\":\"2000\",\r\n    \"quantity\":\"400\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/api/shoppingservice/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"api",
+						"shoppingservice",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-customer-cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"yuno\",\r\n    \"email\":\"yuno@123.com\",\r\n    \"billingAddress\":{\r\n        \"doorNo\":\"989\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"yuno\",\r\n        \"city\":\"london\",\r\n        \"pincode\":\"89898\"\r\n\r\n    },\r\n    \"shippingAddress\":{\r\n        \"doorNo\":\"989\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"yuno\",\r\n        \"city\":\"london\",\r\n        \"pincode\":\"89898\"\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/api/shoppingservice/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"api",
+						"shoppingservice",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-customer-cart",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"items\": [\r\n       \r\n        {\r\n            \"productId\": 2,\r\n            \"productName\": \"sony\",\r\n            \"quantity\":\"\",\r\n            \"price\": 2000\r\n\r\n        }\r\n       \r\n        \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/api/shoppingservice/customer/customerId=33/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"api",
+						"shoppingservice",
+						"customer",
+						"customerId=33",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-customer-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8990/api/shoppingservice/customer/customerId=33/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"api",
+						"shoppingservice",
+						"customer",
+						"customerId=33",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-order details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/api/shoppingservice/customer/customerId=33/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"api",
+						"shoppingservice",
+						"customer",
+						"customerId=33",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

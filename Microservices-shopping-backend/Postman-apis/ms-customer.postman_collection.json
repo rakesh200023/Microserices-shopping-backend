@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "d1827eec-e66b-4f77-a549-4528a7ea94f3",
+		"name": "ms-customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addcustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"asta\",\r\n    \"email\":\"asta@123.com\",\r\n    \"billingAddress\":{\r\n        \"doorNo\":\"99\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"ABC\",\r\n        \"city\":\"city11\",\r\n        \"pincode\":\"123334\"\r\n\r\n    },\r\n    \"shippingAddress\":{\r\n        \"doorNo\":\"99\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"ABC\",\r\n        \"city\":\"city11\",\r\n        \"pincode\":\"123334\"\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/customer/addcustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"customer",
+						"addcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchcustomer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"asta\",\r\n    \"email\":\"asta@123.com\",\r\n    \"billingAddress\":{\r\n        \"doorNo\":\"99\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"ABC\",\r\n        \"city\":\"city11\",\r\n        \"pincode\":\"123334\"\r\n\r\n    },\r\n    \"shippingAddress\":{\r\n        \"doorNo\":\"99\",\r\n        \"streetNo\":\"1\",\r\n        \"layout\":\"ABC\",\r\n        \"city\":\"city11\",\r\n        \"pincode\":\"123334\"\r\n\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8990/customer/searchcustomer/65",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8990",
+					"path": [
+						"customer",
+						"searchcustomer",
+						"65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletecustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/deletecustomer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"deletecustomer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatecustomer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"customerName\": \"asta updated\",\r\n    \"email\": \"astuuua@123.com\",\r\n    \"billingAddress\": {\r\n         \r\n        \"doorNo\": 9000,\r\n        \"streetNo\": 144,\r\n        \"layout\": \"ABCeee\",\r\n        \"city\": \"city11d\",\r\n        \"pincode\": 1233390994\r\n    },\r\n    \"shippingAddress\": {\r\n       \r\n        \"doorNo\": 998,\r\n        \"streetNo\": 1787,\r\n        \"layout\": \"ABddC\",\r\n        \"city\": \"city1ss1\",\r\n        \"pincode\": 12333994\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/updatecustomer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"updatecustomer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

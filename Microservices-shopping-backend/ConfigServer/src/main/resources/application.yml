@@ -1,0 +1,14 @@
+server:
+  port: 8999
+
+spring:
+   application:
+     name: CONFIG-SERVER
+   cloud:
+     config:
+       server:
+         git:
+           uri: https://github.com/rakhm123/config-server
+           clone-on-start: true
+         
+
